@@ -1,8 +1,15 @@
-import pandas as pd
-from typing import BinaryIO, Union
+from __future__ import annotations
 
-def load_dataset(file_or_path: Union[str, BinaryIO]) -> pd.DataFrame:
-    if isinstance(file_or_path, str):
-        if file_or_path.endswith('.csv'):
-            return pd.read_csv(file_or_path)
-    return pd.read_csv(file_or_path)
+from io import BytesIO
+import pandas as pd
+
+
+def read_uploaded_file(file_bytes: bytes, filename: str) -> pd.DataFrame:
+    """Read a CSV or Excel upload into a DataFrame."""
+    lower = filename.lower()
+    buffer = BytesIO(file_bytes)
+    if lower.endswith(".csv"):
+        return pd.read_csv(buffer)
+    if lower.endswith((".xlsx", ".xls")):
+        return pd.read_excel(buffer)
+    raise ValueError("Please upload a CSV or Excel file.")
