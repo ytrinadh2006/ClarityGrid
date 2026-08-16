@@ -11,11 +11,12 @@ st.title("📊 ClarityGrid — Tabular Data Diagnostic Workbench")
 uploaded_file = st.sidebar.file_uploader("Upload CSV or Parquet", type=["csv", "parquet"])
 if uploaded_file:
     df = load_dataset(uploaded_file)
-    st.subheader("Automated Diagnostics")
-    for ins in generate_insights(df):
-        if ins.severity == "CRITICAL":
-            st.error(f"**{ins.title}**: {ins.description}")
-        elif ins.severity == "WARNING":
-            st.warning(f"**{ins.title}**: {ins.description}")
-        else:
+    tab_overview, tab_quality, tab_insights = st.tabs(["Overview", "Data Quality", "Automated Insights"])
+    with tab_overview:
+        st.dataframe(df.head(15))
+    with tab_quality:
+        rep = audit_quality(df)
+        st.metric("Health Score", f"{rep.health_score}/100")
+    with tab_insights:
+        for ins in generate_insights(df):
             st.info(f"**{ins.title}**: {ins.description}")
