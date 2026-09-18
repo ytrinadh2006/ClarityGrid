@@ -23,11 +23,14 @@ When I work with a new dataset, I usually repeat the same steps:
 4. understand numerical and categorical columns;
 5. make a few useful plots;
 6. look for changes or unusual values;
-7. only then decide whether an ML model makes sense.
+7. only then decide whether an ML model makes sense
 
-ClarityGrid puts those steps in one small application.
+ClarityGrid puts these steps into one small application, so I can move from
+raw data to initial analysis without switching between different tools.
 
-The project is intentionally focused on **learning and explainability**, rather than pretending to be a replacement for tools such as Power BI, Tableau, or a production ML platform.
+The idea is simple: understand the data first, then use ML when it actually
+adds value. It is built as a practical learning and experimentation project,
+not as a replacement for tools like Power BI, Tableau, or production ML platforms.
 
 ---
 
@@ -206,14 +209,16 @@ Models used:
 The application reports metrics appropriate to the task rather than inventing a single universal accuracy number.
 
 ---
+## What I haven't added yet
 
-## What I deliberately did not add yet
+For now, I’ve kept ClarityGrid focused on the core data analysis workflow.
+There are still several areas I want to explore as the project grows, such as
+LLM and RAG features, vector databases, advanced ML, data pipelines,
+real-time processing, cloud services, APIs, and a more complete frontend.
 
-I did **not** add an LLM, RAG, vector database, multi-agent workflow, Kubernetes, a cloud data warehouse, or a complicated frontend just to make the project look bigger.
-
-Those technologies can be useful in a later version, but they would make the project harder for me to understand and defend right now.
-
-A future AI-assisted version can sit on top of the existing analysis engine instead of replacing it.
+I’d rather add these step by step and understand how they fit into the
+existing system instead of adding technologies just to make the project
+look bigger.
 
 ---
 
@@ -231,7 +236,7 @@ The goal is to make the application feel more like a small analysis workspace.
 
 **Input → quality → SQL/exploration → trends/anomalies → ML → saved session**
 
-### Future V3 ideas
+### Future scope
 
 - PostgreSQL support
 - FastAPI backend
@@ -258,7 +263,7 @@ This project is still a student-built analytics application.
 - ML preprocessing is basic and should be reviewed for every real dataset.
 - Results should be checked by a person before being used for an actual business decision.
 
-I prefer documenting these limitations instead of hiding them.
+I’ve documented these limitations because ClarityGrid is built mainly for learning, experimenting, and exploring data—not as a production analytics platform.
 
 ---
 
@@ -286,23 +291,21 @@ ClarityGrid/
 ├── docs/
 │   ├── V1.md
 │   ├── V2.md
-│   ├── PROJECT_DECISIONS.md
-│   └── INTERVIEW_NOTES.md
 └── tests/
     ├── test_quality.py
     ├── test_insights.py
     └── test_trends.py
 ```
 
----
-
 ## Project status
 
-This repository is the **new implementation** of ClarityGrid. The previously inspected salary-prediction and hotel-scraping projects were used only as reference material while deciding what problems to avoid and what skills the new project should demonstrate. Their source code, branding, README text and assets are not part of this implementation.
+ClarityGrid is still a work in progress, and I’m continuing to improve it as I learn and add new ideas.
 
-The project is intentionally written in a straightforward style so that the person maintaining it can explain the code rather than treating it as a black box.
+The current version covers the main workflow I wanted to build: exploring a dataset, checking its quality, finding useful patterns, analyzing trends and unusual values, trying simple forecasting and ML models, running SQL queries, and saving previous analyses locally.
 
----
+I’ve kept the project modular so that I can improve or add individual features later without having to change the whole application.
+
+...
 
 ## License
 
