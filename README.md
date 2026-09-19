@@ -1,5 +1,7 @@
 # ClarityGrid
 
+> 🚀 **Live Demo:** https://claritygrid.streamlit.app
+
 ## A small data-to-decision workspace built from scratch
 
 ClarityGrid is a Python project I built to make the first part of a data analysis job less repetitive.
