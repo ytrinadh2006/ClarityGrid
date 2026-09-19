@@ -14,7 +14,6 @@ I did not want this to be a "type your question and an AI magically knows everyt
 ---
 
 ## Why I built it
-
 When I work with a new dataset, I usually repeat the same steps:
 
 1. load the file;
@@ -107,6 +106,39 @@ V2 is still deliberately modest. The goal is to add useful engineering and analy
                    | Summary   |
                    +-----------+
 ```
+
+---
+## Screenshots
+
+### Data overview
+
+![Data overview](Screenshots/overview.png)
+
+### Data quality
+
+![Data quality](Screenshots/data-quality.png)
+
+### Visual analysis
+
+![Visual analysis](Screenshots/visual-analysis.png)
+
+### Insights
+
+![Insights](Screenshots/insights.png)
+
+### Trends and anomalies
+
+![Trends and anomalies](Screenshots/trends.png)
+
+![Additional trends view](Screenshots/trends1.png)
+
+### SQL analysis
+
+![SQL analysis](Screenshots/sql.png)
+
+### Machine learning
+
+![Machine learning](Screenshots/ml.png)
 
 ---
 
