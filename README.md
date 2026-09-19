@@ -300,35 +300,49 @@ This project is still a student-built analytics application.
 I’ve documented these limitations because ClarityGrid is built mainly for learning, experimenting, and exploring data—not as a production analytics platform.
 
 ---
-
-## Repository structure
-
-```text
 ClarityGrid/
 ├── app.py
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
+├── CHANGELOG.md
 ├── .gitignore
-├── app/
-│   └── ui.py
+│
+├── Screenshots/
+│   ├── overview.png
+│   ├── data-quality.png
+│   ├── visual-analysis.png
+│   ├── insights.png
+│   ├── trends.png
+│   ├── trends1.png
+│   ├── sql.png
+│   └── ml.png
+│
 ├── core/
+│   ├── io.py
 │   ├── quality.py
 │   ├── profiling.py
 │   ├── insights.py
 │   ├── ml.py
 │   ├── trends.py
-│   ├── storage.py
-│   └── io.py
+│   ├── sql.py
+│   └── storage.py
+│
 ├── data/
-│   └── sample/orders.csv
+│   └── sample/
+│       └── orders.csv
+│
 ├── docs/
 │   ├── V1.md
-│   ├── V2.md
+│   └── V2.md
+│
 └── tests/
+    ├── conftest.py
     ├── test_quality.py
     ├── test_insights.py
     └── test_trends.py
+
+
 ```
 
 ## Project status
